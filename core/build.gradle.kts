@@ -73,4 +73,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     api(libs.koin.android)
     implementation(libs.library)
+
+    implementation(libs.android.database.sqlcipher)
+    implementation(libs.androidx.sqlite.ktx)
 }

@@ -14,6 +14,9 @@ import com.application.submission_android_expert.core.data.source.local.room.Res
 import com.application.submission_android_expert.core.data.source.remote.RemoteDataSource
 import com.application.submission_android_expert.core.data.source.remote.network.ApiService
 import com.application.submission_android_expert.core.domain.repository.IRestaurantRepository
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -27,10 +30,14 @@ import java.util.concurrent.TimeUnit
 val dbModule = module {
     factory { get<RestaurantDatabase>().restaurantDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("restaurant".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             RestaurantDatabase::class.java, "restaurant.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration()
+            .openHelperFactory(factory)
+            .build()
     }
 }
 
@@ -43,10 +50,17 @@ val prefModule = module {
 
 val networkModule = module {
     single {
+        val hostname = "restaurant-api.dicoding.dev"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/DTfK4/xJroJfN4ZVD29ITgA2f8OWSO6Hm7H9G/sMKdA=")
+            .add(hostname, "sha256/K7rZOrXHknnsEhUH8nLL4MZkejquUuIvOIr6tCa0rbo=")
+            .build()
+
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .readTimeout(120, TimeUnit.SECONDS)
             .connectTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
     single {

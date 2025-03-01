@@ -22,12 +22,16 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
             buildConfigField ("String", "BASE_URL", "\"https://restaurant-api.dicoding.dev/\"")
+        }
+        debug {
+            isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     compileOptions {
@@ -73,11 +77,16 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     ksp(libs.room.compiler)
 
-
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.koin.android)
     implementation(libs.library)
     implementation(libs.core.ktx)
+
+    implementation(libs.android.database.sqlcipher)
+    implementation(libs.androidx.sqlite.ktx)
+
+    debugImplementation (libs.leakcanary.android)
+
     implementation(project(":core"))
 }
