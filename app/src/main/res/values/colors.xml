@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#ECBB04</color>
+    <color name="p40">#32628d</color>
+    <color name="p100s100">#ffffff</color>
+    <color name="s40">#526070</color>
+    <color name="p80">#C3DCFA</color>
+    <color name="p90">#cfe5ff</color>
+    <color name="p98">#EEF3FD</color>
+    <color name="p10">#001d34</color>
+    <color name="s90">#d6e4f7</color>
+    <color name="s10">#0f1d2a</color>
+
+    <color name="p20">#003355</color>
+    <color name="s20">#243240</color>
+    <color name="p30">#134a74</color>
+    <color name="s30">#3a4857</color>
+
+    <color name="background_light">#F8FBFF</color>
+    <color name="background_dark">#3B4857</color>
+</resources>

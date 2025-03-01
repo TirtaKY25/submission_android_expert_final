@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Submission_android_expert" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/p40</item>
+        <item name="colorOnPrimary">@color/p100s100</item>
+        <item name="colorSecondary">@color/s40</item>
+        <item name="colorOnSecondary">@color/p100s100</item>
+        <item name="colorPrimaryContainer">@color/p90</item>
+        <item name="colorOnPrimaryContainer">@color/p10</item>
+        <item name="colorSecondaryContainer">@color/s90</item>
+        <item name="colorOnSecondaryContainer">@color/s10</item>
+        <item name="android:statusBarColor">@color/p40</item>
+    </style>
+
+    <style name="background_fragment">
+        <item name="android:background">@color/background_light</item>
+    </style>
+
+    <style name="appbar_title" parent="TextAppearance.AppCompat.Widget.ActionBar.Title" tools:ignore="UnusedResources">
+        <item name="android:textColor">@color/p100s100</item>
+    </style>
+
+    <style name="appbar_title_style" parent="Widget.AppCompat.ActionBar" tools:ignore="UnusedResources">
+        <item name="titleTextStyle">@style/appbar_title</item>
+    </style>
+
+    <style name="Theme.android_expert_detail" parent="Theme.Material3.DayNight" tools:ignore="UnusedResources">
+        <item name="actionBarStyle">@style/appbar_title_style</item>
+    </style>
+
+    <style name="appbar_background">
+        <item name="android:background">@color/p40</item>
+    </style>
+
+    <style name="active_indicator" parent="">
+        <item name="android:width">64dp</item>
+        <item name="android:height">32dp</item>
+        <item name="marginHorizontal">4dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.NavigationBarView.ActiveIndicator</item>
+        <item name="android:color">?attr/colorSecondaryContainer</item>
+    </style>
+
+    <style name="app_custom_indicator" parent="active_indicator">
+        <item name="android:color">@color/p80</item>
+    </style>
+
+    <style name="bottom_navigation_color">
+        <item name="backgroundTint">@color/p90</item>
+    </style>
+
+    <style name="dark_mode_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="detail_icon_button_back">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/circle_shape</item>
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
+    <style name="detail_icon_button_fav">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/circle_shape</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:foregroundTint">@color/p40</item>
+        <item name="android:tint">@color/p40</item>
+    </style>
+
+    <style name="restaurant_detail_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="category">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/category_shape</item>
+    </style>
+
+    <style name="description_label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="restaurant_detail_description">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">submission_android_expert</string>
+    <string name="title_home">Home</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_settings">Settings</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="restaurant_detail_image">Restaurant Detail Image</string>
+    <string name="back">Back</string>
+    <string name="fav">favorite</string>
+    <string name="description">Description :</string>
+    <string name="location">%1$s, %2$s</string>
+</resources>
